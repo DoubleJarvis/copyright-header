@@ -18,12 +18,26 @@
 # along with Copyright Header.  If not, see <http://www.gnu.org/licenses/>.
 #
 ruby:
-  ext: ['.rb', '.rake']
+  ext: ['.rb', '.rake', '.jbuilder']
   after: ['^#!', '^#.*encoding:', '^#.*frozen_string_literal:']
   comment:
     open:   '\n#\n'
     close:  '#\n'
     prefix: '# '
+
+vue:
+  ext: ['.vue']
+  comment: 
+    open:   '//\n'
+    close:  '//\n'
+    prefix: '// '
+
+erb:
+  ext: ['.erb']
+  comment:
+    open: '<%#\n'
+    close: '%>\n'
+    prefix: '  '
 
 perl:
   ext: ['.pl']
@@ -60,7 +74,7 @@ php:
     close:  ' */ ?>\n'
     prefix: ' * '
 
-javacript:
+javascript:
   ext: ['.js', '.jsx']
   comment:
     open:   '/*\n'
